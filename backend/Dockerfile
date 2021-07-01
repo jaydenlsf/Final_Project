@@ -2,6 +2,7 @@ FROM maven:latest AS build-stage
 COPY . /build
 WORKDIR /build
 RUN mvn clean package -DskipTests
+RUN mvn -Djasypt.encryptor.password=petclinic spring-boot:run
 
 FROM java:8 AS runtime
 WORKDIR /opt/backend
