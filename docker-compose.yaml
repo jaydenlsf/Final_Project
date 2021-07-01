@@ -10,7 +10,7 @@ services:
           protocol: tcp
     backend:
         container_name: backend
-        image: jaydenlsf/spring-petclinic-rest
+        image: jaydenlsf/spring-petclinic-rest-encrypted
         build: ./backend
         ports:
         - target: 9966
